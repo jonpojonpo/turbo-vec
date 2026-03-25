@@ -1,0 +1,27 @@
+[package]
+name = "turbo-vec"
+version = "0.1.0"
+edition = "2024"
+description = "TurboQuant-based vector quantization and search library"
+license = "MIT"
+repository = "https://github.com/jonpojonpo/turbo-vec"
+authors = ["jonpojonpo"]
+keywords = ["vector", "quantization", "search", "simd", "ann"]
+categories = ["algorithms", "science", "compression"]
+
+[dependencies]
+nalgebra = { version = "0.33", features = ["serde-serialize"] }
+rand = "0.9"
+rand_distr = "0.5"
+rayon = "1.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[dev-dependencies]
+criterion = "0.5"
+approx = "0.5"
+
+# [[bench]]
+# name = "quantize"
+# harness = false
